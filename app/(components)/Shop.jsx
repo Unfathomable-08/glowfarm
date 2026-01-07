@@ -7,15 +7,15 @@ const products = [
     { id: 1, name: "Lumina Desk", src: "/lamp1.png" },
     { id: 2, name: "Aura Floor", src: "/lamp2.png" },
     { id: 3, name: "Nebula Pendant", src: "/lamp3.png" },
-    { id: 4, name: "Solaris Wall", src: "/lamp1.png" },
-    { id: 5, name: "Eclipse Table", src: "/lamp2.png" },
-    { id: 6, name: "Zenith Chandelier", src: "/lamp3.png" },
+    { id: 4, name: "Solaris Wall", src: "/lamp4.png" },
+    { id: 5, name: "Eclipse Table", src: "/lamp5.png" },
+    { id: 6, name: "Zenith Chandelier", src: "/lamp6.png" },
     { id: 7, name: "Radiance Bedside", src: "/lamp1.png" },
     { id: 8, name: "Halo Ceiling", src: "/lamp2.png" },
     { id: 9, name: "Nova Outdoor", src: "/lamp3.png" },
-    { id: 10, name: "Cosmos Spot", src: "/lamp1.png" },
-    { id: 11, name: "Stellar Strip", src: "/lamp2.png" },
-    { id: 12, name: "Galaxy Ring", src: "/lamp3.png" },
+    { id: 10, name: "Cosmos Spot", src: "/lamp4.png" },
+    { id: 11, name: "Stellar Strip", src: "/lamp5.png" },
+    { id: 12, name: "Galaxy Ring", src: "/lamp6.png" },
     { id: 13, name: "Galaxy Ring", src: "/lamp1.png" },
     { id: 14, name: "Galaxy Ring", src: "/lamp2.png" },
     { id: 15, name: "Galaxy Ring", src: "/lamp3.png" },
@@ -67,7 +67,7 @@ export default function Shop({ isIntro }) {
                                     key={product.id}
                                     className="relative rounded-lg w-full aspect-square bg-gray-100 overflow-hidden group shadow-md hover:shadow-xl transition-shadow duration-300"
                                 >
-                                    <div className="absolute inset-4 z-10 p-2 border border-white/30 rounded-[4px] flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className="absolute inset-4 z-10 p-2 border border-white/30 rounded-sm flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <p className="text-sm font-semibold text-white tracking-wider uppercase">
                                             {product.name}
                                         </p>
@@ -81,7 +81,7 @@ export default function Shop({ isIntro }) {
                                         />
                                         <motion.div
                                             initial={{ filter: "brightness(1)" }}
-                                            whileInView={{ filter: "brightness(0.3)" }}
+                                            whileInView={{ filter: "brightness(0.15)" }}
                                             viewport={{ once: false }}
                                             transition={{ duration: 3, ease: "linear", delay: 1 }}
                                             className="absolute inset-0 z-0">
