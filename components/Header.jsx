@@ -55,7 +55,26 @@ export default function Header({ isIntro }) {
                         duration: 1.5,
                         ease: "easeOut",
                     }}
-                    className="uppercase whitespace-nowrap"
+                    className="uppercase hidden md:block whitespace-nowrap"
+                >
+                    GlowFarm
+                </motion.h1>
+
+                <motion.h1
+                    layout
+                    initial={{ opacity: 0, letterSpacing: "1em", scale: 0.8 }}
+                    animate={{
+                        opacity: 1,
+                        letterSpacing: isIntro ? "0.5em" : "0.2em",
+                        scale: isIntro ? 1.5 : 1,
+                        fontSize: isIntro ? "1.25rem" : "1.25rem",
+                        fontWeight: "bold"
+                    }}
+                    transition={{
+                        duration: 1.5,
+                        ease: "easeOut",
+                    }}
+                    className="uppercase md:hidden whitespace-nowrap"
                 >
                     GlowFarm
                 </motion.h1>

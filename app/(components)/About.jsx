@@ -6,7 +6,7 @@ const StreetLight = ({ height, delay }) => {
     return (
         <div className="relative flex flex-col items-center" style={{ height }}>
             {/* Pole */}
-            <div className="w-1 md:w-2 bg-zinc-800 h-full rounded-t-full relative">
+            <div className="w-[6px] md:w-2 bg-zinc-800 h-full rounded-t-full relative">
                 {/* Cross arm / Lamp support */}
                 <div className="absolute top-4 left-1/2 -translate-x-1/2 w-8 h-1 bg-zinc-800 rounded-full" />
 
@@ -86,12 +86,17 @@ const StreetLight = ({ height, delay }) => {
 
 export default function About() {
     return (
-        <section className="relative h-screen bg-[#050505] overflow-hidden flex items-end justify-between px-8 md:px-24 py-0">
+        <section className="relative max-md:py-24 min-h-screen bg-[#050505] overflow-hidden flex flex-col md:flex-row items-end justify-between px-8 md:px-24 py-0">
             {/* Left: Street Lights */}
-            <div className="flex items-end gap-12 md:gap-40 mb-[-2px]">
+            <div className="hidden md:flex items-end gap-30 md:gap-40 mb-[-2px]">
                 <StreetLight height="40vh" delay={0.5} />
                 <StreetLight height="55vh" delay={1.2} />
                 <StreetLight height="75vh" delay={1.9} />
+            </div>
+            <div className="flex md:hidden items-end gap-24 mb-10">
+                <StreetLight height="25vh" delay={0.5} />
+                <StreetLight height="40vh" delay={1.2} />
+                <StreetLight height="55vh" delay={1.9} />
             </div>
 
             {/* Right: Narrative Text */}

@@ -36,24 +36,12 @@ const TestimonialCard = ({ testimonial, mouseX, mouseY }) => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group relative h-96 w-80 bg-[#1A1A1A] rounded-3xl p-8 overflow-hidden border border-white/5 flex flex-col justify-between"
+            className="group relative h-96 w-80 bg-[#222222] rounded-3xl p-8 overflow-hidden border border-white/5 flex flex-col justify-between"
         >
-            {/* Spotlight Overlay */}
-            <motion.div
-                className="absolute inset-0 z-0 pointer-events-none transition-opacity duration-300 group-hover:opacity-100 opacity-0"
-                style={{
-                    background: useSpring(
-                        `radial-gradient(400px circle at var(--x) var(--y), rgba(255, 246, 229, 0.08), transparent 80%)`,
-                        { stiffness: 500, damping: 50 }
-                    ),
-                    '--x': mouseX,
-                    '--y': mouseY
-                }}
-            />
 
             <div className="relative z-10">
-                <div className="text-4xl text-amber-200/40 font-serif mb-6 italic">"</div>
-                <p className="text-zinc-400 text-lg leading-relaxed group-hover:text-zinc-200 transition-colors duration-500 italic">
+                <div className="text-4xl text-amber-200/60 font-serif mb-6 italic">"</div>
+                <p className="text-zinc-300 text-lg leading-relaxed group-hover:text-zinc-100 transition-colors duration-500 italic">
                     {testimonial.quote}
                 </p>
             </div>
