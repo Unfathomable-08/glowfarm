@@ -87,9 +87,9 @@ export default function Footer() {
                             <input
                                 type="email"
                                 placeholder="Midnight email"
-                                className="w-full bg-zinc-900/50 border border-zinc-800 py-3 px-4 rounded-full text-sm focus:outline-none focus:border-white/70 transition-all focus:bg-zinc-800"
+                                className="w-full bg-zinc-900/50 border border-zinc-500 py-3 px-4 rounded-full text-sm focus:outline-none focus:border-white/70 transition-all focus:bg-zinc-800"
                             />
-                            <button className="absolute right-2 top-1.2 py-1.5 px-3 bg-white text-black rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center">
+                            <button className="absolute right-2 top-2 py-1.5 px-3 bg-white text-black rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center">
                                 <FiArrowRight />
                             </button>
                         </div>

@@ -2,36 +2,6 @@
 
 import { motion } from "framer-motion";
 
-const Meteor = ({ delay }) => {
-    return (
-        <motion.div
-            initial={{
-                x: "120%",
-                y: "-20%",
-                opacity: 0,
-                scale: 0.5
-            }}
-            animate={{
-                x: "-20%",
-                y: "120%",
-                opacity: [0, 1, 1, 0],
-            }}
-            transition={{
-                duration: 1.5,
-                delay,
-                repeat: Infinity,
-                ease: "linear",
-                repeatDelay: Math.random() * 5 + 2
-            }}
-            style={{ left: Math.random() * 100 + "%" }}
-            className="absolute w-50 h-px bg-linear-to-l from-amber-200 via-amber-200/50 to-transparent -rotate-45 blur-[1px] z-0"
-        >
-            {/* Meteor Head Glow */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-amber-200 rounded-full shadow-[0_0_10px_#fde68a]" />
-        </motion.div>
-    );
-};
-
 const ValueBox = ({ title, content, index }) => {
     return (
         <motion.div
@@ -88,13 +58,6 @@ const values = [
 export default function Values() {
     return (
         <section className="relative bg-[#020202] overflow-hidden px-8 md:px-24">
-            {/* Meteor Rain Layer */}
-            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                {[...Array(50)].map((_, i) => (
-                    <Meteor key={i} delay={Math.random() * 10} />
-                ))}
-            </div>
-
             <div className="max-w-7xl mx-auto relative z-10">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-4">
                     {values.map((v, i) => (
