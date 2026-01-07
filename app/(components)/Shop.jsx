@@ -81,8 +81,9 @@ export default function Shop({ isIntro }) {
                                         />
                                         <motion.div
                                             initial={{ filter: "brightness(1)" }}
-                                            animate={{ filter: "brightness(0.3)" }}
-                                            transition={{ duration: 5, ease: "linear", delay: 2 }}
+                                            whileInView={{ filter: "brightness(0.3)" }}
+                                            viewport={{ once: false }}
+                                            transition={{ duration: 3, ease: "linear", delay: 1 }}
                                             className="absolute inset-0 z-0">
                                             <Image
                                                 src="/gray-box.jpg"
