@@ -106,7 +106,7 @@ export default function Footer() {
                     </h1>
                     <div className="text-zinc-300 text-xs uppercase tracking-widest text-center md:text-right">
                         <span>© 2026. THE ART OF RADIANCE.</span> <br />
-                        <span className="mt-1 block opacity-50">DESIGNED BY TECHDXON</span>
+                        <span className="mt-1 block opacity-50">DESIGNED BY <a href="techdxon.com">TECHDXON</a></span>
                     </div>
                 </div>
             </div>
@@ -114,3 +114,4 @@ export default function Footer() {
         </footer>
     );
 }
+
