@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiInstagram, FiTwitter, FiFacebook, FiYoutube, FiArrowRight } from "react-icons/fi";
+import { FiExternalLink } from "react-icons/fi";
 
 const FooterLink = ({ children, href = "#" }) => (
     <motion.a
@@ -98,15 +99,20 @@ export default function Footer() {
                 </div>
 
                 {/* Global Signature */}
-                <div className="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div className="pt-16 border-t border-white/5 flex flex-col justify-between md:items-start items-center gap-8">
                     <h1
                         className="text-6xl md:text-[10rem] font-bold text-white/20 tracking-tighter select-none pointer-events-none"
                     >
                         GLOW FARM
                     </h1>
-                    <div className="text-zinc-300 text-xs uppercase tracking-widest text-center md:text-right">
-                        <span>© 2026. THE ART OF RADIANCE.</span> <br />
-                        <span className="mt-1 block opacity-90">DESIGNED BY <a className="underline pb-1" href="https://www.techdxon.com">TECHDXON</a></span>
+                    <div className="text-white/30 text-sm sm:text-md md:text-xl font-bold uppercase md:tracking-[1rem]">
+                        <span className="md:ml-4 flex items-center gap-x-[0.2rem] md:gap-x-4">
+                            DESIGNED BY 
+                            <a className="" href="https://www.techdxon.com">TECHDXON</a>
+                            <a className="md:text-3xl text-lg pb-1" href="https://www.techdxon.com">
+                                <FiExternalLink />
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -114,6 +120,3 @@ export default function Footer() {
         </footer>
     );
 }
-
-
-
